@@ -1,4 +1,4 @@
-from utils import split, listToString, contain, chart2ASCIICon3Digitos
+from utils import split, list2String, contain, chart2ASCIICon3Digitos
 
 def codificarASCII(textoParaCodificar: str) -> str:
     
@@ -15,9 +15,33 @@ def codificarASCII(textoParaCodificar: str) -> str:
         listaDeCaracteresCodificados.append(tempChart)
 
     # Se crea un texto codificado a partir de la lista de caracteres codificados
-    caracteresCodificados = listToString(listaDeCaracteresCodificados) 
+    caracteresCodificados = list2String(listaDeCaracteresCodificados) 
     return caracteresCodificados
 
+
+def convierteStringAListaConElementosDe3Digitos(string: str) -> list:
+    # Numero de digitos por elemento del Array
+    # Se escoge el numero 3, porque son necesarios 3 digitos para convertir un 
+    # un numero en una letra utilizando la
+    d = 3
+
+    # Crea una lista con una longitud de 3 elementos
+    customRange =  range(0, len(string), d)
+
+    # [listOfListNumber] es un Array de 2 dimensiones, la 1ra dimension del array
+    # representa toda la oracion, la segunda dimension del array representa la letra  
+    listOfListNumber = [ string[i:i + d] for i in customRange ]
+
+    listOfStringNumber = []
+    for listOfNumber in listOfListNumber:
+        
+        # Se transforma la lista a string
+        stringOfNumber = list2String(listOfNumber)
+
+        listOfStringNumber.append(stringOfNumber)
+
+
+    return listOfStringNumber
 
 def decodificarASCII(textoParaDecoficar: str) -> str:
 
@@ -37,7 +61,8 @@ def decodificarASCII(textoParaDecoficar: str) -> str:
     # print(listaDeCaracteres)
     return listaDeCaracteres
 
-decodificarASCII('1001106111106111106111106111106')
+# decodificarASCII('1001106111106111106111106111106')
+
 
 
 def crearMensajeCodificado(
@@ -65,3 +90,4 @@ def crearMensajeCodificado(
     # Se modifica el contenido del archivo de texto 
     tempFile.write(tempContentFile)
     return tempContentFile
+

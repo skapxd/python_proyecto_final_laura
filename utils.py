@@ -1,9 +1,9 @@
-def split(word):
+def split(word) -> list:
     return [char for char in word]
 
 
 
-def listToString(s): 
+def list2String(s: str) -> str: 
     str1 = "" 
 
     for ele in s: 
