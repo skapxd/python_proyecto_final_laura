@@ -1,0 +1,9 @@
+
+Cadena de texto original: -1202450789072112111108108497097099999795
+Mensaje decodificado: Hola
+Resultado de la operacion: Hola
+Cantidad de letras del mensaje: 4
+Cantidad de vocales en el mensaje: 2
+Cantidad de consonantes en el mensaje: 2
+
+    

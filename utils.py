@@ -32,15 +32,7 @@ def chart2ASCIICon3Digitos(chart: str) -> str:
 
     tempChart = f'{ord(chart)}'
 
-    chart3Digit = formatNumber(chart, '000')
-
-    # chart3Digit = ''
-    # if len(tempChart) == 1:
-    #     chart3Digit = f'00{tempChart}'
-    # elif len(tempChart) == 2:
-    #     chart3Digit = f'0{tempChart}'
-    # else:
-    #     chart3Digit = tempChart
+    chart3Digit = formatNumber(tempChart, '000')
 
     # Ejemplos de valores retornados
     # ej:1 -> '009'
@@ -60,8 +52,6 @@ def formatNumber(string: str, formatOfValue: str) -> str:
 
     tempDigits = ''
     i = 0
-    print('string: ', len(string))
-    print('formatOfValue: ', len(formatOfValue))
     while i < (len(formatList) - len(string)):
         tempDigits += '0'
         i += 1
@@ -73,6 +63,17 @@ def formatNumber(string: str, formatOfValue: str) -> str:
     return f'{tempDigits}{string}'
 
 
-print(
-    formatNumber('75', '000')
-)
+def contarVocales(cadena: str) -> int:
+	contador = 0
+	for letra in cadena:
+		if letra.lower() in "aeiou":
+			contador += 1
+	return contador
+
+    
+def contarConsonantes(cadena: str) -> int:
+	contador = 0
+	for letra in cadena:
+		if letra.lower() not in "aeiou":
+			contador += 1
+	return contador

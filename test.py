@@ -1,11 +1,23 @@
-texto = '+1202450789072112111108108497097099999795'
+# # # texto = '+1202450789072112111108108497097099999795'
 
-operacion = texto[0]
-posicionInicial = texto[1:3]
-paso = texto[3:5]
-# mensaje = texto[11::int(paso)]
+# # # for t in texto:
+# # #     print(t)
 
-print('operacion: ', operacion)
-print('posicionInicial: ', posicionInicial)
-print('paso: ', paso)
-# print('mensaje: ', mensaje)
+# # myList = [8, 20, 4]
+# # myList.sort()
+# # print(myList)
+
+# # newList = [num for num in reversed(myList)]
+# # print(newList)
+
+# result = [""]
+# for i in range(3):
+#     result.append(
+#         "{}{}(X-X{})".format(result[-1], "" if result[-1] == "" else " * ", i))
+# result[0] = 1
+
+# print(result)
+
+print(
+    type('abc') == type('abc')
+)
